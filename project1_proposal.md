@@ -18,6 +18,8 @@ Research questions to Answer:
 **is there an age group with less insurance coverage?
 **is there an age group with more deaths?
 **what conclusion can we draw from these questions
+**Alternative hypothesis: More ppl below poverty line, fewer ppl insured
+**null hypothesis: povery does not affect insurance coverage
 
 Datasets to be used:
     Health Insurance – Data.gov csv
