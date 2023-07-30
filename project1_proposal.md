@@ -22,7 +22,7 @@ Research questions to Answer:
 **null hypothesis: povery does not affect insurance coverage
 
 Datasets to be used:
-    Health Insurance – Data.gov csv
+    Small Area Health Insurance Estimates (SAHIE) [State and County 2006-2020].
     Heart Disease Mortality by County API
 
 Rough breakdown of Tasks:
