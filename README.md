@@ -8,11 +8,11 @@ heart mortality by county.
 
 Research Questions to Answer:
 
-1. If an individual has insurance, are they less likely to die from heart disease?
+1. If an individual has insurance, are they less likely to die from heart disease? 2 geographical maps, 1 scatterplot
        
-2. Is an individual in a higher income bracket more likely to be insured?
+2. Is an individual in a higher income bracket more likely to be insured? ttest, box and whisker
         
-3. Does the total population in a given county coorelate with the amount of individuals insured?
+3. Does the total population in a given county coorelate with the amount of individuals insured? 2 bar graphs, 1 pie chart
 
 Alternative hypothesis: The lower income population is less likely to be insured
 /n
