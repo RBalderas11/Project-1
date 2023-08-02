@@ -10,7 +10,7 @@ Research Questions to Answer:
 
 1. If an individual has insurance, are they less likely to die from heart disease?
         According to our graphs and data, it can be concluded that yes, if an individual has insurance, they are less likely to die from heart disease. Referring to the two geographical maps of the NC counties that show the mortality numbers by county and percent insured by county respectively, it is clear that the "darker colored" counties on the mortality map, are shown on the percent insured map as "lighter colors". 
-2. If an individual is below the poverty line, are they more likely to die from heart disease?
+2. Is an individual in a higher income bracket, more likely to be insured?
         
 3. Is there a significant impact to an individual's ability to survive heart disease due to their income and insurance coverage?
 
@@ -28,3 +28,18 @@ Data Needs:
 There are some additional programs that will be needed for the graphs and maps to show:
 Geopandas
 Hvplot
+
+## Data Sources
+### Small Area Health Insurance Estimates (SAHIE) Program
+The Small Area Health Insurance Estimates (SAHIE) program was created to develop model-based estimates of health insurance coverage for counties and states. This program builds on the work of the Small Area Income and Poverty Estimates (SAIPE) program. SAHIE is the only source of single-year health insurance coverage estimates.
+SAHIE data can be used to analyze geographic variation in health insurance coverage, as well as disparities in coverage by race/ethnicity, sex, age and income levels that reflect thresholds for state and federal assistance programs. Because consistent estimates are available from 2008 to 2020, SAHIE reflects annual changes over time.
+- Data Source <https://www.census.gov/programs-surveys/sahie/about.html>
+- Terms os Service <https://www.census.gov/data/developers/about/terms-of-service.html>
+### Rates and Trends in Heart Disease and Stroke Mortality Among US Adults (35+) by County, Age Group, Race/Ethnicity, and Sex – 2000-2019
+This dataset documents rates and trends in heart disease and stroke mortality. Specifically, this report presents county (or county equivalent) estimates of heart disease and stroke death rates in 2000-2019 and trends during two intervals (2000-2010, 2010-2019) by age group (ages 35–64 years, ages 65 years and older), race/ethnicity (non-Hispanic American Indian/Alaska Native, non-Hispanic Asian/Pacific Islander, non-Hispanic Black, Hispanic, non-Hispanic White), and sex (women, men). The rates and trends were estimated using a Bayesian spatiotemporal model and a smoothed over space, time, and demographic group. Rates are age-standardized in 10-year age groups using the 2010 US population.
+- Data source: National Vital Statistics System <https://data.cdc.gov/Heart-Disease-Stroke-Prevention/Rates-and-Trends-in-Heart-Disease-and-Stroke-Morta/7b9s-s8ck>
+## Data Limitations
+1. **Sample Size and Coverage:** The data used in this analysis is based on specific sources, such as the Census Bureau and the Centers for Disease Control (CDC), which may have limitations in terms of sample size and geographical coverage. Consequently, some counties or regions may have limited or missing data, which could impact the generalizability of the findings.
+2. **Data Quality and Completeness:** Data quality vary across our two sources of data. In the SAHIE data, ages of 65 and over are not included, as most people ages 65 and over are covered by Medicare or Supplemental Security Income (SSI). According to recent CPS ASEC data, less than 2 percent of the 65+ population were uninsured nationwide. In the Mortality data, ages below 35 are not included in the dataset. We have taken steps to clean and preprocess the data, but some inaccuracies may still persist.
+3. **Temporal Scopes:** The data used in this project only covers year 2019. It's important to note that trends and patterns may have changed over time.
+4. **Causation vs. Correlation:** While our analysis explores relationships between income, insurance coverage, and heart disease mortality, it is essential to understand that correlation does not imply causation. Other factors may influence those relationships.
