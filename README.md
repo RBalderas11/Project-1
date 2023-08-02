@@ -8,13 +8,14 @@ heart mortality by county.
 
 Research Questions to Answer:
 
-1. If an individual has insurance, are they less likely to die from heart disease?
-        According to our graphs and data, it can be concluded that yes, if an individual has insurance, they are less likely to die from heart disease. Referring to the two geographical maps of the NC counties that show the mortality numbers by county and percent insured by county respectively, it is clear that the "darker colored" counties on the mortality map, are shown on the percent insured map as "lighter colors". 
-2. Is an individual in a higher income bracket, more likely to be insured?
+1. If an individual has insurance, are they less likely to die from heart disease? 2 geographical maps, 1 scatterplot
+       
+2. Is an individual in a higher income bracket more likely to be insured? ttest, box and whisker
         
-3. Is there a significant impact to an individual's ability to survive heart disease due to their income and insurance coverage?
+3. Does the total population in a given county coorelate with the amount of individuals insured? 2 bar graphs, 1 pie chart
 
 Alternative hypothesis: The lower income population is less likely to be insured
+/n
 Null hypothesis: Income levels have no affect on percentage covered
     We ran a T-test on the insurance coverage data by income, comparing the highest income bracket (Over 400% of Poverty) and the lowest income bracket (Under 138% of Poverty) and received a p-value of less than 0.05, so the null hypothesis can be rejected, and lean further into the credibility of the alternative hypothesis being true.
 
@@ -43,3 +44,5 @@ This dataset documents rates and trends in heart disease and stroke mortality. S
 2. **Data Quality and Completeness:** Data quality vary across our two sources of data. In the SAHIE data, ages of 65 and over are not included, as most people ages 65 and over are covered by Medicare or Supplemental Security Income (SSI). According to recent CPS ASEC data, less than 2 percent of the 65+ population were uninsured nationwide. In the Mortality data, ages below 35 are not included in the dataset. We have taken steps to clean and preprocess the data, but some inaccuracies may still persist.
 3. **Temporal Scopes:** The data used in this project only covers year 2019. It's important to note that trends and patterns may have changed over time.
 4. **Causation vs. Correlation:** While our analysis explores relationships between income, insurance coverage, and heart disease mortality, it is essential to understand that correlation does not imply causation. Other factors may influence those relationships.
+
+1.  According to our graphs and data, it can be concluded that yes, if an individual has insurance, they are less likely to die from heart disease. Referring to the two geographical maps of the NC counties that show the mortality numbers by county and percent insured by county respectively, it is clear that the "darker colored" counties on the mortality map, are shown on the percent insured map as "lighter colors". 
