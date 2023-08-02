@@ -9,8 +9,14 @@ heart mortality by county.
 Research Questions to Answer:
 
 1. If an individual has insurance, are they less likely to die from heart disease?
+        According to our graphs and data, it can be concluded that yes, if an individual has insurance, they are less likely to die from heart disease. Referring to the two geographical maps of the NC counties that show the mortality numbers by county and percent insured by county respectively, it is clear that the "darker colored" counties on the mortality map, are shown on the percent insured map as "lighter colors". 
 2. If an individual is below the poverty line, are they more likely to die from heart disease?
+        
 3. Is there a significant impact to an individual's ability to survive heart disease due to their income and insurance coverage?
+
+Alternative hypothesis: The lower income population is less likely to be insured
+Null hypothesis: Income levels have no affect on percentage covered
+    We ran a T-test on the insurance coverage data by income, comparing the highest income bracket (Over 400% of Poverty) and the lowest income bracket (Under 138% of Poverty) and received a p-value of less than 0.05, so the null hypothesis can be rejected, and lean further into the credibility of the alternative hypothesis being true.
 
 Data Sets to be Used:
 
@@ -22,6 +28,3 @@ Data Needs:
 There are some additional programs that will be needed for the graphs and maps to show:
 Geopandas
 Hvplot
-
-
-
