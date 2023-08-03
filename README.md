@@ -63,19 +63,19 @@ The insured and uninsured populations are calculated for different age categorie
 - Hvplot
 
 ---
-1. In our first research question, we examine the correlation between health insurance coverage and mortality rates of heart disease through the following:
+## 1. In our first research question, we examine the correlation between health insurance coverage and mortality rates of heart disease through the following:
 
 ### Percentage of Insured Population per County
 
 In this section, we present the data visualization of the percentage of insured population in each county of North Carolina. The visualization showcases the geographic distribution of insurance coverage across the counties, providing valuable insights into the variation of insured population percentages. The interactive heatmap plot uses a color gradient (cmap="YlOrRd") to represent the range of insurance coverage percentages. Counties are colored according to their respective percentage of insured population, and hovering over a county displays additional information, including the county name and the corresponding percentage of insured population. This data visualization offers an intuitive and geospatial perspective of insurance coverage, helping us identify regions with varying levels of insured population percentages.
 
-![Percentage of Population Insured Per County][assets/images/Perncetage_insured.png]
+![Percentage of Population Insured Per County](assets/images/Perncetage_insured.png)
 
 ### Mortality Rates per County
 ### Correlation analysis
 
 ---
-2. The second question was trying to determine if there is a correlation between the income categories and the health insurance coverage
+## 2. The second question was trying to determine if there is a correlation between the income categories and the health insurance coverage
 
 ### Outliers Analysis and Boxplot Visualization
 An outlier analysis was performed on the percentage of insured population data based on income categories. The goal is to identify potential outliers in the dataset using the Interquartile Range (IQR) method. This outlier analysis provides a quantitative assessment of data points that deviate significantly from the typical range, allowing for further investigation and consideration of their impact on the analysis results. 
@@ -95,9 +95,16 @@ Alternative hypothesis: The lower income population is less likely to be health 
 Null hypothesis: Income levels have no affect on percentage of population with health insurance coverage.
 
 Based on the t-test results, The **t-statistic** is approximately 38.28. This value represents the difference in means between the two groups, taking into account the variation within each group. The **p-value** is approximately 1.17e-80. This p-value is extremely small, essentially being zero. With such a small p-value, we can confidently reject the null hypothesis. The null hypothesis assumes that there is no significant difference between the percentage of insured population for high-income and low-income individuals. However, the extremely low p-value suggests strong evidence that there is a statistically significant difference in insurance coverage between these two income groups.
----
-3. 
 
+---
+
+## 3. In the third Question, we examined the correlation between the population and the percenatage of people insured per county.
+### Pie Chart
+First, we plotted the whole insured versus uninsured population, the chart shows that 86.6% of North Carolina's populationis insured against 13.4% uninsured.
+![Insured vs. Uninsured Population in NC](assets/images/pie_chart.png)
+### Bar Charts for Top and Bottom Five Populated Counties
+From these two plots we can observe that the insured population is significantly higher than uninsured population in the top five populated counties and the bottom five populated counties
+![Insurance Coverage in Most Populated Counties](assets/images/bar_top5.png) ![Insurance coverage in least populated counties](assets/images/bar_bottom5.png)
 
 
 
