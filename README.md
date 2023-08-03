@@ -11,6 +11,20 @@
 
 In this project, we researched the impact of insurance coverage on heart disease mortality in year 2019, in the state of North Carolina. Our research was based on data compiled from the Census Bureau and the Centers for Disease Control (CDC). We focused on understanding the relationship between health insurance coverage and income levels in relation to the poverty line and the relationship between health insurance coverage and heart disease mortality rates at the county level.
 
+## Table of Contents
+
+- Data Sources
+    - Small Area Health Insurance Estimates (SAHIE) Program
+    - Rates and Trends in Heart Disease and Stroke Mortality Among US Adults (35+) by County, Age Group, Race/Ethnicity, and Sex – 2000-2019
+- Data Limitations
+- Research Questions
+- Data Retrieval and Cleaning
+- Data Analysis and Visualization
+    - Used Modules
+    - Research Question 1
+    - Research Question 2
+    - Research Question 3
+- Conclusion
 ## Data Sources
 
 ### Small Area Health Insurance Estimates (SAHIE) Program
@@ -46,11 +60,11 @@ This dataset documents rates and trends in heart disease and stroke mortality. S
 
 ## Data Retieval and Cleaning
 
-The data is obtained through an API request to the Census Bureau's API, specifically the Small Area Health Insurance Estimates (SAHIE) dataset. The API request fetches insurance-related data for the year 2019 for all counties in North Carolina. The retrieved data is converted into a Pandas DataFrame, where the columns are appropriately renamed for clarity. Unused columns and rows are dropped, and the DataFrame is further cleaned and organized.
+In **census_data.ipynb** notebook, The Census data is obtained through an API request to the Census Bureau's API, specifically the Small Area Health Insurance Estimates (SAHIE) dataset. The API request fetches insurance-related data for the year 2019 for all counties in North Carolina. The retrieved data is converted into a Pandas DataFrame, where the columns are appropriately renamed for clarity. Unused columns and rows are dropped, and the DataFrame is further cleaned and organized.
 
 The insured and uninsured populations are calculated for different age categories and income categories within each county. The data is then aggregated into two new DataFrame, clean_insurance_by_age and clean_insurance by_income containing information on the number of insured and uninsured individuals for various age and income categories in each county. Then, The percentages of insured and uninsured populations are calculated based on the aggregated data.
 
-## Data Analysis and Visualization
+In **mortality_data.ipynb** notebook, data related to heart disease mortality in North Carolina counties is retrieved from the CDC (Centers for Disease Control) endpoint, and then the data is cleaned and prepared for analysis.
 
 ### Used Modules:
 - Pandas
@@ -61,8 +75,16 @@ The insured and uninsured populations are calculated for different age categorie
 - Scipy
 - Geopandas
 - Hvplot
-
----
+## Data Analysis and Visualization
+### Used Modules:
+- Pandas
+- Numpy
+- Matplotlib
+- Requests
+- JSON
+- Scipy
+- Geopandas
+- Hvplot
 ## 1. In our first research question, we examine the correlation between health insurance coverage and mortality rates of heart disease through the following:
 
 ### Percentage of Insured Population per County
@@ -72,7 +94,13 @@ In this section, we present the data visualization of the percentage of insured 
 ![Percentage of Population Insured Per County](assets/images/Perncetage_insured.png)
 
 ### Mortality Rates per County
+A geographical map was used to provide a visual representation of heart disease mortality rates across North Carolina counties. Warmer colors indicate higher mortality rates, while cooler colors represent lower rates.
+![Heart Disease Mortality per 100,000 NC](assets/images/mortality_plot.png)
+By examining both geographic plots side by side, we can visually notice that there is some correspondence betweem ares with higher insurance coverage and lower heart disease mortality rates. but still we can find counties with high insurance coverage and high heart disease mortality rates and vice versa so we will have to further investigate this relationship in order to determine whether there is a correlation between these two variables.
 ### Correlation analysis
+In this section, the percentage of insured population and heart disease mortality rates for individuals are merged and analyzed to explore the potential relationship between insurance coverage and heart disease mortality.a scatter plot was created to visualize the relationship between the percentage of insured population and heart disease mortality rates. The x-axis represents the "Percentage Insured" and the y-axis represents "Deaths Per 100,000". also, a linear regression line is added to observe any potential trend in the data.
+![Percentage Insured vs. Deaths Per 100,000](assets/images/mortality_plot.png)
+Based on the results, the correlation between the per county mortality rate and per county percentage of insured population in North Carolina is approximately -0.24. A correlation coefficient of -0.24 indicates that there is some negative linear association between the two variables, but the strength of the relationship is not very strong. This means that as the percentage of Insured population of a county increases, there tends to be a slight tendency for heart disease mortality rate to deccrease. However, the relationship is not strong enough to make definitive conclusions solely based on this correlation.
 
 ---
 ## 2. The second question was trying to determine if there is a correlation between the income categories and the health insurance coverage
@@ -105,20 +133,14 @@ First, we plotted the whole insured versus uninsured population, the chart shows
 ### Bar Charts for Top and Bottom Five Populated Counties
 From these two plots we can observe that the insured population is significantly higher than uninsured population in the top five populated counties and the bottom five populated counties
 ![Insurance Coverage in Most Populated Counties](assets/images/bar_top5.png) ![Insurance coverage in least populated counties](assets/images/bar_bottom5.png)
+### Scatter Plot for Total Population vs Percenatage Insured Per County
+A scatter plot was generated to explore the relationship between the percentage of insured population and the total population in North Carolina counties.this visualization allows you to examine each county's total population against its corresponding percentage of insured population. Additionally, a linear regression line is added to observe any potential trend in the data.
+![Total Population vs. Percentage Insured](assets/images/population_scatter.png)
+Based on the results, the correlation between the per county total population and per county percentage of insured population in North Carolina is approximately 0.29. A correlation coefficient of 0.29 indicates that there is some positive linear association between the two variables, but the strength of the relationship is not very strong. This means that as the total population of a county increases, there tends to be a slight tendency for the percentage of insured population to increase as well. However, the relationship is not strong enough to make definitive conclusions solely based on this correlation.
 
+## Conclusion
+1. Referring to the two geographical maps of the NC counties that show the percent insured by county and mortality numbers by county respectively, it is clear that the “darker colored” counties on the mortality map, are more than probably shown on the percent insured map as “lighter colors” but this is not the case in all counties. So, A scatter plot with a line of regression was created as well, that shows a weak negative correlation between percent insured and mortality, with an r value of -0.24. So, with the data given, there is not enough to prove that if an individual has insurance, that they are less likely to die from heart disease.
 
+2. We measured the central tendency of the insurance coverage percentages for each income category and created a box and whisker plot, in addition to t-test. The t-test produced a p-value of less than 0.05, which demonstrates that the two measures have statistical significance to each other, so valuable insight can be gathered from further analysis. Then, the box and whisker plot showed that the mean of the insured percentage increases as the income increases. So we were able to come to the conclusion that yes, an individual with a higher income bracket is more likely to be insured.
 
-
-
-
-
-
-
-
-
-
-Conclusion:
-Based on the t-test results, there is a significant difference in the percentage of insured population between individuals with incomes "Over 400% of Poverty" and "Under 138% of Poverty." This finding may have important implications for understanding how income levels impact insurance coverage rates in the context of heart disease mortality analysis in North Carolina.
-
-
-
+3. As a whole, the percentage of the insured population of North Carolina is significantly higher than then uninsured percentage, which is reflected in the pie chart. It still made us question if the counties with the higher population tended to have a higher percentage of insured individuals. With such a big dataset, we created visualizations for just the top five most populated counties and the bottom five least populated counties. With the bar charts created, there isn’t much correlation between population and percentage insured, if any. So to dig a little deeper, we created a scatterplot with a line of regression. The scatter plot shows minor correlation, and the r value calculated was 0.29, which is regarded as a weak correlation. With all these findings, we have concluded that while there is a weak correlation between the county population and the insured percentage, it isn’t enough to demonstrate significance.
