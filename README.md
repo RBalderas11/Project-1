@@ -91,7 +91,7 @@ A geographical map was used to provide a visual representation of heart disease 
 By examining both geographic plots side by side, we can visually notice that there is some correspondence betweem ares with higher insurance coverage and lower heart disease mortality rates. but still we can find counties with high insurance coverage and high heart disease mortality rates and vice versa so we will have to further investigate this relationship in order to determine whether there is a correlation between these two variables.
 ### Correlation analysis
 In this section, the percentage of insured population and heart disease mortality rates for individuals are merged and analyzed to explore the potential relationship between insurance coverage and heart disease mortality.a scatter plot was created to visualize the relationship between the percentage of insured population and heart disease mortality rates. The x-axis represents the "Percentage Insured" and the y-axis represents "Deaths Per 100,000". also, a linear regression line is added to observe any potential trend in the data.
-![Percentage Insured vs. Deaths Per 100,000](assets/images/mortality_plot.png)
+![Percentage Insured vs. Deaths Per 100,000](assets/images/mortality_scatter.png)
 Based on the results, the correlation between the per county mortality rate and per county percentage of insured population in North Carolina is approximately -0.24. A correlation coefficient of -0.24 indicates that there is some negative linear association between the two variables, but the strength of the relationship is not very strong. This means that as the percentage of Insured population of a county increases, there tends to be a slight tendency for heart disease mortality rate to deccrease. However, the relationship is not strong enough to make definitive conclusions solely based on this correlation.
 
 ---
@@ -121,6 +121,7 @@ Based on the t-test results, The **t-statistic** is approximately 38.28. This va
 ## 3. In the third Question, we examined the correlation between the population and the percenatage of people insured per county.
 ### Pie Chart
 First, we plotted the whole insured versus uninsured population, the chart shows that 86.6% of North Carolina's populationis insured against 13.4% uninsured.
+
 ![Insured vs. Uninsured Population in NC](assets/images/pie_chart.png)
 ### Bar Charts for Top and Bottom Five Populated Counties
 From these two plots we can observe that the insured population is significantly higher than uninsured population in the top five populated counties and the bottom five populated counties
@@ -128,6 +129,7 @@ From these two plots we can observe that the insured population is significantly
 ### Scatter Plot for Total Population vs Percenatage Insured Per County
 A scatter plot was generated to explore the relationship between the percentage of insured population and the total population in North Carolina counties.this visualization allows you to examine each county's total population against its corresponding percentage of insured population. Additionally, a linear regression line is added to observe any potential trend in the data.
 ![Total Population vs. Percentage Insured](assets/images/population_scatter.png)
+
 Based on the results, the correlation between the per county total population and per county percentage of insured population in North Carolina is approximately 0.29. A correlation coefficient of 0.29 indicates that there is some positive linear association between the two variables, but the strength of the relationship is not very strong. This means that as the total population of a county increases, there tends to be a slight tendency for the percentage of insured population to increase as well. However, the relationship is not strong enough to make definitive conclusions solely based on this correlation.
 
 ## Conclusion
