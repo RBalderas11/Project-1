@@ -66,15 +66,7 @@ The insured and uninsured populations are calculated for different age categorie
 
 In **mortality_data.ipynb** notebook, data related to heart disease mortality in North Carolina counties is retrieved from the CDC (Centers for Disease Control) endpoint, and then the data is cleaned and prepared for analysis.
 
-### Used Modules:
-- Pandas
-- Numpy
-- Matplotlib
-- Requests
-- JSON
-- Scipy
-- Geopandas
-- Hvplot
+
 ## Data Analysis and Visualization
 ### Used Modules:
 - Pandas
